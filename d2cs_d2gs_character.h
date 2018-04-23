@@ -7,7 +7,8 @@
 
 #ifdef D2GS
 # include "bn_types.h"
-#pragma pack(push, pack01, 1)
+/* winemaker: #pragma pack(push, pack01, 1) */
+#include <pshpack1.h>
 #endif 
 
 #define D2CHARINFO_MAGICWORD		0x12345678
@@ -57,7 +58,8 @@ typedef struct
 } t_d2charinfo_file;
 
 #ifdef D2GS
-#pragma pack(pop, pack01)
+/* winemaker: #pragma pack(pop, pack01) */
+#include <poppack.h>
 #endif
 
 #endif

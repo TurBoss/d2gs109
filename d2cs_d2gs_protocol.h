@@ -12,7 +12,8 @@
 
 #ifdef D2GS
 # include "bn_types.h"
-#pragma pack(push, pack01, 1)
+/* winemaker: #pragma pack(push, pack01, 1) */
+#include <pshpack1.h>
 #endif
 
 typedef struct
@@ -137,7 +138,8 @@ typedef struct
 } t_d2gs_d2cs_closegame;
 
 #ifdef D2GS
-#pragma pack(pop, pack01)
+/* winemaker: #pragma pack(pop, pack01) */
+#include <poppack.h>
 #endif
 
 #endif

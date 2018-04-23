@@ -3,7 +3,8 @@
 
 
 #include "bn_types.h"
-#pragma pack(push, pack02, 1)
+/* winemaker: #pragma pack(push, pack02, 1) */
+#include <pshpack1.h>
 
 
 /* packet */
@@ -103,7 +104,8 @@ typedef struct {
 } t_d2gs_d2dbs_echoreply;
 
 
-#pragma pack(pop, pack02)
+/* winemaker: #pragma pack(pop, pack02) */
+#include <poppack.h>
 
 
 #endif /* INCLUDED_D2DBS_D2GS_PROTOCOL_H */
