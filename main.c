@@ -1,6 +1,6 @@
 /*
  * main.c: main routine of this program
- * 
+ *
  * 2001-08-20 faster
  *   add initialization routine and main loop of this program
  */
@@ -41,9 +41,9 @@ static CLEANUP_RT_ITEM	*pCleanupRT = NULL;
  * Main procedure begins here
  ********************************************************************************/
 #ifdef _DEBUG
-int main(int argc, char **argv)
-#else
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInst, LPSTR lpCmdLine, int nCmdShow)
+#else
+int main(int argc, char **argv)
 #endif
 {
 	DWORD	dwWait;
@@ -192,11 +192,11 @@ int DoCleanup(void)
 	if (hStopEvent) CloseHandle(hStopEvent);
 
 #ifdef DEBUG_ON_CONSOLE
+	return TRUE;
+#endif
 	printf("Press Any Key to Continue");
 	_getch();
-#endif
 
-	return TRUE;
 
 } /* End of DoCleanup() */
 
@@ -273,4 +273,3 @@ void CloseServerMutex(void)
 	hD2GSMutex = NULL;
 
 } /* End of CloseServerMutex() */
-

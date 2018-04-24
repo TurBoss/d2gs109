@@ -1,2 +1,10 @@
 
 *.o
+
+*.dll
+
+*.mpq
+
+d2gs\.exe
+
+build/
